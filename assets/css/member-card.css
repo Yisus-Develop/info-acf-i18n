@@ -1,0 +1,222 @@
+:root{
+  --mc-bg:#ffffff; --mc-text:#1b1b1b; --mc-muted:#5f6b63;
+  --mc-brand:#006838; --mc-brand-2:#3D5935; --mc-accent:#37b36b;
+  --mc-card-shadow:0 12px 40px rgba(0,0,0,.12); --mc-radius:16px;
+}
+
+/* Disparador */
+.mc-open{
+  display:inline-flex; gap:.5rem; align-items:center;
+  padding:.65rem 1.05rem; border:0; border-radius:999px;
+  background:linear-gradient(135deg,var(--mc-brand),var(--mc-brand-2));
+  color:#fff; font-weight:600; letter-spacing:.2px; cursor:pointer;
+  box-shadow:0 6px 20px rgba(0,0,0,.12); transition:.25s ease;
+}
+.mc-open:hover{ transform:translateY(-2px); box-shadow:0 10px 24px rgba(0,0,0,.18); }
+.mc-open__icon{ filter:drop-shadow(0 1px 0 rgba(0,0,0,.15)); }
+
+/* Popup */
+.mc-popup{ display:none; position:fixed; inset:0; z-index:99999;
+  background:rgba(0,0,0,.5); backdrop-filter:blur(3px);
+  align-items:center; justify-content:center; padding:20px;
+}
+.mc-popup.active{ display:flex; }
+
+/* Card */
+.mc-card{
+  width:min(720px,94vw); background:var(--mc-bg); color:var(--mc-text);
+  border-radius:var(--mc-radius); box-shadow:var(--mc-card-shadow);
+  position:relative; padding:22px 22px 18px; overflow:hidden;
+}
+.mc-card::before{
+  content:""; position:absolute; inset:-40% -40% auto auto; height:240px; width:240px;
+  background:radial-gradient(120px 120px at 70% 30%, #8fd3b033, transparent 60%);
+  transform:rotate(12deg);
+}
+
+/* X cerrar */
+.mc-close{
+  position:absolute; right:14px; top:14px; width:36px; height:36px;
+  border:0; border-radius:10px; background:var(--mc-brand); color:#fff; cursor:pointer;
+  display:grid; place-items:center; box-shadow:0 6px 16px rgba(0,104,56,.35);
+  transition:.25s ease; padding:0;
+}
+.mc-close:hover{ background:#008f4f; transform:scale(1.05); }
+.mc-close svg{ pointer-events:none; }
+
+/* Header */
+.mc-hero{ display:flex; gap:16px; align-items:center; margin-bottom:10px; }
+.mc-photo{ width:92px; height:92px; border-radius:50%; object-fit:cover; box-shadow:0 6px 18px rgba(0,0,0,.16); }
+.mc-photo--placeholder{ width:92px; height:92px; border-radius:50%; background:#e7efe9; color:#3D5935; display:grid; place-items:center; font-weight:800; font-size:30px; }
+.mc-id{ min-width:0; }
+.mc-name{ font-size:1.35rem; margin:.2rem 0 .1rem; font-weight:800; letter-spacing:.2px; }
+.mc-role{ margin:0; color:var(--mc-muted); font-weight:600; }
+.mc-bio{ margin:.6rem 0 0; color:#38433d; line-height:1.5; }
+
+/* Chips */
+.mc-grid{ display:flex; flex-wrap:wrap; gap:.55rem; margin:16px 0 8px; }
+.mc-chip{
+  display:inline-flex; align-items:center; gap:.45rem;
+  padding:.5rem .75rem; border-radius:12px; text-decoration:none; color:#163621;
+  background:#f1f6f3; border:1px solid #e0ece4; font-weight:600;
+  transition:.2s ease; box-shadow:inset 0 -1px 0 rgba(0,0,0,.03);
+}
+.mc-chip:hover{ transform:translateY(-1px); background:#e9f3ed; border-color:#d5e6dc; }
+.mc-ico{ display:grid; place-items:center; line-height:0; }
+
+/* Footer */
+.mc-footer{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:14px; margin-top:14px; padding-top:12px; border-top:1px dashed #dfe9e3;
+  flex-wrap:wrap;
+}
+
+/* Botón descargar (móvil primero) */
+.mc-download{
+  display:inline-flex; align-items:center; gap:.5rem;
+  padding:.55rem .85rem; border-radius:10px; text-decoration:none; color:#fff !important;
+  background:linear-gradient(135deg,var(--mc-brand),var(--mc-accent));
+  font-weight:700; box-shadow:0 10px 24px rgba(0,104,56,.25); transition:.25s ease;
+}
+.mc-download:hover{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,104,56,.33); }
+
+/* QR */
+.mc-qrbox{ margin:0 0 0 auto; text-align:center; display:none; }
+.mc-qr{ width:128px; height:128px; border-radius:10px; box-shadow:0 8px 20px rgba(0,0,0,.12); }
+.mc-qrbox figcaption{ font-size:.8rem; color:var(--mc-muted); margin-top:.3rem; }
+
+/* Desktop: ocultar botón, mostrar QR */
+@media (min-width:768px){
+  .mc-download{ display:none; }
+  .mc-qrbox{ display:block; }
+}
+
+/* Ajustes móviles */
+@media (max-width:520px){
+  .mc-hero{ align-items:flex-start; }
+  .mc-name{ font-size:1.15rem; }
+  .mc-photo, .mc-photo--placeholder{ width:78px; height:78px; }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark){
+  .mc-card{ background:#101615; color:#eaf3ee; }
+  .mc-role{ color:#a7b7ad; }
+  .mc-bio{ color:#cfe0d7; }
+  .mc-chip{ background:#17221d; border-color:#233026; color:#ddf0e6; }
+  .mc-chip:hover{ background:#1c2a23; border-color:#2c3b30; }
+}
+/* Desktop: ocultar botón, mostrar y CENTRAR QR */
+@media (min-width:768px){
+  .mc-download{ display:none; }
+  .mc-qrbox{ display:block; margin-left:auto; margin-right:auto; } /* centrado */
+  .mc-footer{ justify-content:center; } /* centra el bloque del footer */
+}
+
+
+.mc-qr-stack{
+  display:flex; gap:16px; align-items:flex-start;
+  margin-left:auto; margin-right:auto;
+}
+@media (max-width:767px){
+  .mc-qr-stack{ display:none; } /* en móvil escondemos los QR */
+}
+
+
+/* ====== Tabs QR (paleta InPP + aisladas de Elementor) ====== */
+:root{
+  --mc-brand:#006838;     /* Verde InPP */
+  --mc-brand-2:#3D5935;   /* Verde secundario */
+  --mc-tab-border:#2c7e55;
+  --mc-tab-bg:#1f6b49;
+  --mc-tab-active:#2f8b61;
+  --mc-tab-shadow: rgba(0,104,56,.28);
+}
+
+.mc-qrcenter{ display:none; width:100%; }
+@media (min-width:768px){
+  .mc-qrcenter{ display:block; }
+}
+
+.mc-qr-toggle{
+  display:flex; gap:10px; justify-content:center; margin:0 auto 10px; width:100%;
+}
+
+.mc-qr-toggle .mc-qr-tab{
+  all: unset; /* reset total para evitar estilos de Elementor */
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:.45rem .9rem;
+  border-radius:10px;
+  border:2px solid var(--mc-tab-border);
+  background: linear-gradient(135deg, var(--mc-tab-bg), var(--mc-brand-2));
+  color:#fff;
+  font-weight:800;
+  letter-spacing:.2px;
+  cursor:pointer;
+  line-height:1;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+}
+.mc-qr-toggle .mc-qr-tab:hover{
+  transform:translateY(-1px);
+}
+.mc-qr-toggle .mc-qr-tab.is-active{
+  background: linear-gradient(135deg, var(--mc-tab-active), var(--mc-brand));
+  border-color: var(--mc-brand);
+  box-shadow:0 6px 18px var(--mc-tab-shadow);
+}
+
+/* QR y caption */
+.mc-qrbox{ margin:0 auto; text-align:center; }
+.mc-qr{ width:180px; height:180px; border-radius:10px; box-shadow:0 8px 20px rgba(0,0,0,.12); }
+.mc-qr-caption{ font-size:.85rem; color:var(--mc-muted, #9aa6a0); margin-top:.4rem; letter-spacing:.04em; }
+
+/* En desktop centramos el footer */
+@media (min-width:768px){
+  .mc-footer{ justify-content:center; }
+}
+
+
+
+.mc-qr-tip{ display:block; text-align:center; margin-top:6px; color:#9aa6a0; font-size:.82rem; }
+@media (max-width:767px){
+  .mc-qr-tip{ display:none; } /* oculto en móvil */
+}
+
+/* 🔹 Caja de acciones móviles */
+.mc-mobile-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra el botón */
+  gap: .5rem;
+  margin-top: 12px;
+}
+
+/* 🔹 Botón en móvil: se mantiene centrado */
+.mc-mobile-actions .mc-download {
+  text-align: center;
+}
+
+/* 🔹 Texto de hint (iOS/Android) */
+.mc-android-hint {
+  display: block;
+  font-size: .82rem;
+  line-height: 1.4;
+  text-align: center;   /* centra el texto */
+  color: #7a857e;       /* gris verdoso acorde paleta InPP */
+  margin-top: 4px;
+  max-width: 260px;     /* evita que quede muy ancho en pantallas grandes */
+}
+
+/* 🔹 Solo aplica en móvil */
+@media (min-width: 768px) {
+  .mc-mobile-actions {
+    align-items: flex-start; /* en escritorio se alinea normal */
+  }
+  .mc-android-hint {
+    text-align: left;
+    margin-left: 0;
+    max-width: none;
+  }
+}

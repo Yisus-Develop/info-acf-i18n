@@ -1,0 +1,76 @@
+/* ====== Estilos para popups de candidaturas ====== */
+.vac-popup {
+  position: fixed;
+  inset: 0;
+  display: none;
+  place-items: center;
+  background: rgba(0,0,0,.7);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+}
+.vac-popup.active {
+  display: grid;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.vac-popup-content {
+  position: relative;
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 16px;
+  max-width: 700px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 30px rgba(0,0,0,.4);
+  transform: translateY(-40px);
+  transition: transform .35s ease;
+}
+.vac-popup.active .vac-popup-content { transform: translateY(0); }
+
+button.vac-btn {
+  background-color: #3D593580;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--e-global-color-accent, #006838);
+  border-radius: 100px;
+  padding: 12px 22px;
+  border: 1px solid currentColor;
+  cursor: pointer;
+}
+button.vac-btn:hover {
+  background-color: var(--e-global-color-primary, #006838);
+  color: var(--e-global-color-secondary, #fff);
+}
+
+.vac-close {
+  position: absolute;
+  top: 10px; right: 10px;
+}
+/* Botón de cierre centrado dentro del cuadrado */
+button.vac-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  width: 36px;
+  height: 36px;
+  padding: 0;              /* evita que se descuadre */
+  border: 0;
+  border-radius: 8px;
+  background: #006838;
+  color: #fff;
+
+  display: flex;           /* centra el contenido */
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  line-height: 1;          /* que la X no “suba” por line-height */
+  cursor: pointer;
+  box-shadow: none;
+  text-align: center;
+}

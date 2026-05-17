@@ -1,0 +1,198 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: info-acf-plugin 1.2.1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: custom-py\n"
+
+msgid "%d min de leitura"
+msgstr ""
+
+msgid "ACF plugin is required."
+msgstr ""
+
+msgid "APLICAR AGORA"
+msgstr ""
+
+msgid "Adicionar aos Contactos (iPhone)"
+msgstr ""
+
+msgid "Android"
+msgstr ""
+
+msgid "Ao tocar, abrirá nos Contactos."
+msgstr ""
+
+msgid "Candidatura Espontânea"
+msgstr ""
+
+msgid "Cartão Digital"
+msgstr ""
+
+msgid "Chamada"
+msgstr ""
+
+msgid "Comments"
+msgstr ""
+
+msgid "Departamento:"
+msgstr ""
+
+msgid "Development"
+msgstr ""
+
+msgid "Development Code"
+msgstr ""
+
+msgid "Documento"
+msgstr ""
+
+msgid "E-mail"
+msgstr ""
+
+msgid "EDITAL"
+msgstr ""
+
+msgid "Equipa"
+msgstr ""
+
+msgid "Escaneie com Android"
+msgstr ""
+
+msgid "Escaneie com iPhone"
+msgstr ""
+
+msgid "Escolha o seu dispositivo. Se o QR não abrir contactos, use o botão no telemóvel."
+msgstr ""
+
+msgid "Eventos"
+msgstr ""
+
+msgid "Fase do Pipeline:"
+msgstr ""
+
+msgid "Fechar"
+msgstr ""
+
+msgid "Ficha Técnica"
+msgstr ""
+
+msgid "Ficheiro"
+msgstr ""
+
+msgid "Ficheiro:"
+msgstr ""
+
+msgid "Field"
+msgstr ""
+
+msgid "Formato de QR"
+msgstr ""
+
+msgid "Formulário não definido."
+msgstr ""
+
+msgid "Guardar contacto (.vcf)"
+msgstr ""
+
+msgid "Guardar contacto (Android)"
+msgstr ""
+
+msgid "In-Planta"
+msgstr ""
+
+msgid "In-Vitro"
+msgstr ""
+
+msgid "Informação do Projeto"
+msgstr ""
+
+msgid "LinkedIn"
+msgstr ""
+
+msgid "Localização"
+msgstr ""
+
+msgid "Market"
+msgstr ""
+
+msgid "Market Launch"
+msgstr ""
+
+msgid "Membro"
+msgstr ""
+
+msgid "Mensagem"
+msgstr ""
+
+msgid "National phases"
+msgstr ""
+
+msgid "Nenhum evento encontrado."
+msgstr ""
+
+msgid "Nenhum projeto encontrado."
+msgstr ""
+
+msgid "Não há vagas disponíveis no momento."
+msgstr ""
+
+msgid "PCT"
+msgstr ""
+
+msgid "PPP"
+msgstr ""
+
+msgid "Patent filling"
+msgstr ""
+
+msgid "Posição"
+msgstr ""
+
+msgid "Posição:"
+msgstr ""
+
+msgid "Posts Relacionados"
+msgstr ""
+
+msgid "Prazo:"
+msgstr ""
+
+msgid "Product"
+msgstr ""
+
+msgid "Projetos"
+msgstr ""
+
+msgid "QR (.vcf)"
+msgstr ""
+
+msgid "QR MECARD"
+msgstr ""
+
+msgid "QR contacto"
+msgstr ""
+
+msgid "Recrutamento"
+msgstr ""
+
+msgid "Ref.:"
+msgstr ""
+
+msgid "SABER MAIS"
+msgstr ""
+
+msgid "Será descarregado o ficheiro .vcf; abra-o para adicionar aos seus contactos."
+msgstr ""
+
+msgid "Target"
+msgstr ""
+
+msgid "Ver"
+msgstr ""
+
+msgid "Website"
+msgstr ""
+
+msgid "iPhone"
+msgstr ""

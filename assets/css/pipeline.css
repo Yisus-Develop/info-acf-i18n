@@ -1,0 +1,207 @@
+/* ===== Pipeline BIO & DIGITAL - Styles ===== */
+
+/* ==== GRID: MÁS ANCHO PARA TARGET/MARKET ==== */
+.pipeline-bio-pipeline-header, .pipeline-bio-pipeline-row {
+    grid-template-columns: 160px 180px 180px 1.2fr 1.2fr 1.3fr;
+}
+.pipeline-digital-header, .pipeline-digital-row {
+    grid-template-columns: 180px 180px 180px 1.1fr 1.1fr 1.2fr;
+}
+
+/* ==== General styles igual que los últimos que usaste ==== */
+.pipeline-bio-pipeline-list, .pipeline-digital-list {
+    width: 100%;
+    padding: 14px 0 28px 0;
+    background: none !important;
+    border-radius: 16px;
+    overflow-x: hidden;
+    margin-top: 8px;
+}
+.pipeline-bio-pipeline-header, .pipeline-digital-header {
+    display: grid;
+    font-weight: 700;
+    font-size: 1.01em;
+    color: #205944;
+    background: none;
+    margin-bottom: 6px;
+    border: none;
+    gap: 0;
+    letter-spacing: .01em;
+}
+.pipeline-bio-pipeline-header > div, .pipeline-digital-header > div {
+    padding: 9px 7px 6px 12px;
+    background: none;
+    border-bottom: 2px solid #3bd5a13f;
+    border-radius: 0 0 9px 9px;
+    text-align: left;
+    white-space: nowrap;
+    font-size: .97em;
+}
+.pipeline-bio-pipeline-row, .pipeline-digital-row {
+    display: grid;
+    background: #fff;
+    margin-bottom: 18px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px #34b88313;
+    transition: box-shadow .14s, transform .09s;
+    border: none;
+    align-items: center;
+    position: relative;
+}
+.pipeline-bio-pipeline-row:hover, .pipeline-digital-row:hover {
+    box-shadow: 0 5px 20px #34b88324;
+    transform: scale(1.004);
+}
+.cell {
+    padding: 12px 9px 10px 12px;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: .8em;
+    color: #184936;
+    border: none;
+    min-width: 0;
+    position: relative;
+}
+.cell-mini-label { display: none !important; }
+
+.cell-code-flex, .cell-product-flex {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    min-width: 0;
+}
+.cell-code-value, .cell-product-value {
+    font-size: 0.93em;
+    line-height: normal;
+    font-weight: 700;
+    color: #184936;
+    letter-spacing: 0.01em;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    min-width: 0;
+    word-break: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cell-code-link {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px dashed rgba(52,184,131,.35);
+    transition: .15s;
+}
+.cell-code-link:hover { border-bottom-color: rgba(52,184,131,.65); opacity: .95; }
+
+.pipeline-bio-icon, .pipeline-digital-icon {
+    width: 14px; height: 14px; border-radius: 50%; object-fit: contain;
+    background: #fff; border: 1px solid #e1ede6; box-shadow: 0 1px 6px #1e784a09; margin-right: 4px; flex-shrink: 0;
+}
+
+.bar-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: .90em;
+    color: #53a49e;
+    font-weight: 500;
+    margin: 0 5px 2px 1px;
+    gap: 2px;
+}
+.pipeline-bar {
+    background: #e1ede6;
+    height: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 2px 0;
+    min-width: 54px;
+    box-shadow: 0 1px 2px #17493309;
+}
+.pipeline-bar-fill {
+    background: #34b883;
+    height: 100%;
+    border-radius: 6px 0 0 6px;
+    transition: width .9s cubic-bezier(.7,.3,.3,1.08);
+    box-shadow: 0 1px 6px #2e865219;
+    width: 0;
+}
+.pipeline-bar-fill.patent { background: #4ca5b8; }
+
+/* SCROLL TARGET/MARKET */
+.cell-value-scroll {
+    white-space: pre-line;
+    word-break: break-word;
+    max-height: 5em;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-size: .93em;
+    padding-right: 2px;
+    scrollbar-width: thin;
+    scrollbar-color: #d1ede6 #fff;
+}
+.cell-value-scroll::-webkit-scrollbar { width: 4px; background: #fff; }
+.cell-value-scroll::-webkit-scrollbar-thumb { background: #d1ede6; border-radius: 7px; }
+
+.cell-comments-ellipsis {
+    max-height: 3.7em;
+    overflow-y: auto;
+    font-size: 0.9em;
+    line-height: 1.2;
+    padding-right: 2px;
+    word-break: break-word;
+    white-space: pre-line;
+}
+.cell-comments-ellipsis::-webkit-scrollbar { width: 4px; background: #fff; }
+.cell-comments-ellipsis::-webkit-scrollbar-thumb { background: #d1ede6; border-radius: 7px; }
+.cell-comments-ellipsis { scrollbar-width: thin; scrollbar-color: #d1ede6 #fff; }
+
+/* ====== Tablet ====== */
+@media (max-width: 900px) {
+    .pipeline-bio-pipeline-header,
+    .pipeline-bio-pipeline-row,
+    .pipeline-digital-header,
+    .pipeline-digital-row { grid-template-columns: 110px 1fr 1fr 1.1fr 1.1fr 1.3fr; }
+    .cell { padding: 8px 3px 7px 8px; font-size: .93em; }
+    .pipeline-bar { min-width: 32px; height: 7px; }
+    .cell-code-value, .cell-product-value { white-space: normal; }
+}
+
+/* ====== Móvil: más separación/aire y labels visibles ====== */
+@media (max-width: 700px) {
+    .pipeline-bio-pipeline-header,
+    .pipeline-digital-header { display: none !important; }
+    .pipeline-bio-pipeline-row,
+    .pipeline-digital-row {
+        display: flex !important;
+        flex-direction: column;
+        align-items: stretch;
+        box-shadow: 0 2px 8px #1e784a09;
+        padding: 12px 10px;
+        border-radius: 12px;
+        margin-bottom: 12px;
+    }
+    .cell { padding: 8px 2px 6px 0; font-size: .92em; }
+    /* Separadores sutiles entre bloques (aire visual) */
+    .pipeline-bio-pipeline-row .cell + .cell,
+    .pipeline-digital-row .cell + .cell {
+        margin-top: 8px; padding-top: 8px;
+        border-top: 1px solid rgba(24,73,54,0.06);
+    }
+    .cell-mini-label {
+        display: block !important;
+        font-size: .89em;
+        color: #35a399;
+        font-weight: 700;
+        margin-bottom: 4px;
+        opacity: .82;
+        letter-spacing: .02em;
+        line-height: 1.1;
+        text-transform: uppercase;
+    }
+    .bar-labels { font-size: .86em; margin-bottom: 4px; }
+    .cell-code-flex, .cell-product-flex { gap: 6px; }
+    .pipeline-bio-icon, .pipeline-digital-icon { width: 13px; height: 13px; }
+    .pipeline-bar { height: 8px; }
+    .cell-code-value, .cell-product-value { font-size: .92em; line-height: normal; }
+}
