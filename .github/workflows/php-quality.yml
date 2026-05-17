@@ -30,4 +30,4 @@ jobs:
           echo "$HOME/.config/composer/vendor/bin" >> "$GITHUB_PATH"
 
       - name: Run PHPCS
-        run: phpcs --standard=WordPress-Core,WordPress-Docs,WordPress-Extra . --ignore=vendor/*,.git/*
+        run: phpcs --standard=WordPress-Core,WordPress-Docs,WordPress-Extra --extensions=php . --ignore=vendor/*,.git/*
