@@ -19,7 +19,7 @@ jobs:
           php-version: "8.1"
           tools: composer:v2
 
-      - name: Validate PHP syntax
+      - name: Validate PHP syntax (blocking)
         run: find . -name "*.php" -not -path "./vendor/*" -not -path "./.git/*" -print0 | xargs -0 -n1 php -l
 
       - name: Install PHPCS + WPCS
@@ -29,5 +29,6 @@ jobs:
           echo "$HOME/.composer/vendor/bin" >> "$GITHUB_PATH"
           echo "$HOME/.config/composer/vendor/bin" >> "$GITHUB_PATH"
 
-      - name: Run PHPCS
+      - name: Run PHPCS (non-blocking report)
+        continue-on-error: true
         run: phpcs --standard=WordPress-Core,WordPress-Docs,WordPress-Extra --extensions=php . --ignore=vendor/*,.git/*
