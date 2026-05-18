@@ -12,6 +12,17 @@
 
 defined('ABSPATH') || exit;
 
+require_once plugin_dir_path( __FILE__ ) . 'includes/class-eweb-github-updater.php';
+
+add_action( 'init', function() {
+    new EWEB_GitHub_Updater( array(
+        'owner'       => 'Yisus-Develop',
+        'repo'        => 'eweb-content-functionalities',
+        'plugin_file' => plugin_basename( __FILE__ ),
+        'version'     => '1.2.1',
+    ) );
+} );
+
 /** Constante para rutas/URLs desde cualquier include */
 if (!defined('IAP_PLUGIN_FILE')) {
     define('IAP_PLUGIN_FILE', __FILE__);
