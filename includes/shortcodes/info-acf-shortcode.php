@@ -16,7 +16,7 @@ function info_acf_section_shortcode($atts) {
 		case 'ficheiro':
 			$file = get_field('file');
 			if ($file) {
-				echo '<p><strong>' . __('Ficheiro:', 'info-acf-plugin') . '</strong> <a href="' . esc_url($file['url']) . '" target="_blank">' . __('Ver', 'info-acf-plugin') . '</a></p>';
+				echo '<p><strong>' . __('Ficheiro:', 'eweb-content-functionalities') . '</strong> <a href="' . esc_url($file['url']) . '" target="_blank">' . __('Ver', 'eweb-content-functionalities') . '</a></p>';
 
 			}
 			break;

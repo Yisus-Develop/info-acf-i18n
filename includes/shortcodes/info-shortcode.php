@@ -94,7 +94,7 @@ function info_shortcode() {
 
     // SEÇÃO: INFORMAÇÃO DO PROJETO
     echo '<div class="section-info-projeto section-block">';
-    echo '<h3>' . __('Informação do Projeto', 'info-acf-plugin') . '</h3>';
+    echo '<h3>' . __('Informação do Projeto', 'eweb-content-functionalities') . '</h3>';
     
     
     
@@ -103,7 +103,7 @@ function info_shortcode() {
     $file = get_field('file');
     if ($file) {
         echo '<div class="section-ficheiro section-block">';
-        echo '<p><strong>' . __('Ficheiro', 'info-acf-plugin') . ':</strong> ';
+        echo '<p><strong>' . __('Ficheiro', 'eweb-content-functionalities') . ':</strong> ';
         echo '<a href="' . esc_url($file['url']) . '" target="_blank" rel="noopener noreferrer">' . esc_html($file['filename']) . '</a></p>';
         echo '</div>';
     }
@@ -112,21 +112,21 @@ function info_shortcode() {
     $viewer = get_field('viewer');
     if ($viewer) {
         echo '<div class="section-viewer section-block">';
-        echo '<p><strong>' . __('Documento', 'info-acf-plugin') . ':</strong> ' . esc_html($viewer) . '</p>';
+        echo '<p><strong>' . __('Documento', 'eweb-content-functionalities') . ':</strong> ' . esc_html($viewer) . '</p>';
         echo '</div>';
     }
 
    // Ficha Técnica
 if (have_rows('info') || get_field('fase_projeto')) {
     echo '<div class="section-ficha section-block">';
-    echo '<h3>' . __('Ficha Técnica', 'info-acf-plugin') . '</h3>';
+    echo '<h3>' . __('Ficha Técnica', 'eweb-content-functionalities') . '</h3>';
     echo '<div class="ficha-tecnica">';
 
     // ✅ Mostrar fase atual como item fixo
     $fase_atual = get_field('fase_projeto');
     if ($fase_atual) {
         echo '<div class="ficha-item">';
-        echo '<span class="label"><strong>' . __('Fase do Pipeline:', 'info-acf-plugin') . '</strong></span> ';
+        echo '<span class="label"><strong>' . __('Fase do Pipeline:', 'eweb-content-functionalities') . '</strong></span> ';
         echo '<span class="value">' . esc_html($fase_atual) . '</span>';
         echo '</div>';
     }
@@ -182,13 +182,13 @@ if (have_rows('info') || get_field('fase_projeto')) {
 
     if (!empty($members)) {
         echo '<div class="section-miembros section-block">';
-        echo '<h3>' . esc_html__('Equipa', 'info-acf-plugin') . '</h3>';
+        echo '<h3>' . esc_html__('Equipa', 'eweb-content-functionalities') . '</h3>';
 
         // Encabezados visuales como si fueran tabla
         echo '<div class="members-table">';
         echo '<div class="row-header">';
-        echo '<div class="col"><strong>' . esc_html__('Membro', 'info-acf-plugin') . '</strong></div>';
-        echo '<div class="col"><strong>' . esc_html__('Posição', 'info-acf-plugin') . '</strong></div>';
+        echo '<div class="col"><strong>' . esc_html__('Membro', 'eweb-content-functionalities') . '</strong></div>';
+        echo '<div class="col"><strong>' . esc_html__('Posição', 'eweb-content-functionalities') . '</strong></div>';
         echo '</div>';
 
         foreach ($members as $m) {
@@ -211,7 +211,7 @@ if (have_rows('info') || get_field('fase_projeto')) {
     // POSTS RELACIONADOS
     if (have_rows('posts')) {
         echo '<div class="section-posts section-block">';
-        echo '<h3>' . __('Posts Relacionados', 'info-acf-plugin') . '</h3>';
+        echo '<h3>' . __('Posts Relacionados', 'eweb-content-functionalities') . '</h3>';
         echo '<ul class="no-bullets">';
         while (have_rows('posts')) : the_row();
             $post = get_sub_field('post');

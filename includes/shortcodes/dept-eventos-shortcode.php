@@ -6,7 +6,7 @@ function shortcode_eventos_do_departamento() {
     if (!$post) return '';
 
     $output = '<div class="dept-section event_dep">';
-   // $output .= '<h3>' . __('Eventos', 'info-acf-plugin') . '</h3>';
+   // $output .= '<h3>' . __('Eventos', 'eweb-content-functionalities') . '</h3>';
     $output .= '<ul>';
 
     if (have_rows('posts', $post->ID)) {
@@ -18,7 +18,7 @@ function shortcode_eventos_do_departamento() {
             }
         }
     } else {
-        $output .= '<li>' . __('Nenhum evento encontrado.', 'info-acf-plugin') . '</li>';
+        $output .= '<li>' . __('Nenhum evento encontrado.', 'eweb-content-functionalities') . '</li>';
     }
 
     $output .= '</ul></div>';

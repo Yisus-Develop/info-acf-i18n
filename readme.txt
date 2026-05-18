@@ -1,4 +1,4 @@
-=== Info ACF Plugin ===
+=== EWEB - Content Functionalities ===
 Contributors: (añade tu usuario de WP.org o equipo)
 Tags: acf, shortcodes, pipeline, popups, vacancies, departamentos
 Requires at least: 6.0
@@ -24,7 +24,7 @@ Este plugin centraliza diversos shortcodes y utilidades para WordPress + ACF:
 **Características:**
 - Todos los shortcodes están documentados en esta guía y pueden usarse en páginas, entradas o widgets (incluido Elementor).
 - Incluye assets CSS/JS para popups, pipelines y tarjetas de miembros.
-- Internacionalización lista con text domain `info-acf-plugin`.
+- Internacionalización lista con text domain `eweb-content-functionalities`.
 
 == Installation ==
 
@@ -68,11 +68,11 @@ En la carpeta `/languages/` se incluye el `.pot` para traducciones.
 
 == Changelog ==
 
-= 1.0.0 = (2025-09-08)
+= 1.2.1 = (2026-05-18)
 * Publicación inicial de la documentación.
 * Inclusión de pipelines (Bio/Digital), vacantes, popups y shortcodes de departamento.
 
 == Upgrade Notice ==
 
-= 1.0.0 =
-Primera versión documentada. Incluye todos los shortcodes y assets básicos.
+= 1.2.1 =
+Alineación de naming EWEB, documentación EN/ES y workflow de calidad PHP.

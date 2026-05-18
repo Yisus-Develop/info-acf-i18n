@@ -20,12 +20,12 @@ add_shortcode('pipeline_bio_pipeline', function () {
     ob_start(); ?>
     <div class="pipeline-bio-pipeline-list">
         <div class="pipeline-bio-pipeline-header">
-            <div><?php _e('Development Code', 'info-acf-plugin');?></div>
-            <div><?php _e('Target', 'info-acf-plugin');?></div>
-            <div><?php _e('Market', 'info-acf-plugin');?></div>
-            <div><?php _e('Development', 'info-acf-plugin');?></div>
-            <div><?php _e('Patent filling', 'info-acf-plugin');?></div>
-            <div><?php _e('Comments', 'info-acf-plugin');?></div>
+            <div><?php _e('Development Code', 'eweb-content-functionalities');?></div>
+            <div><?php _e('Target', 'eweb-content-functionalities');?></div>
+            <div><?php _e('Market', 'eweb-content-functionalities');?></div>
+            <div><?php _e('Development', 'eweb-content-functionalities');?></div>
+            <div><?php _e('Patent filling', 'eweb-content-functionalities');?></div>
+            <div><?php _e('Comments', 'eweb-content-functionalities');?></div>
         </div>
         <?php foreach ($pipelines as $post):
             $id  = $post->ID;
@@ -64,7 +64,7 @@ add_shortcode('pipeline_bio_pipeline', function () {
         <div class="pipeline-bio-pipeline-row">
             <!-- Development Code -->
             <div class="cell cell-code">
-                <div class="cell-mini-label"><?php _e('Development Code', 'info-acf-plugin');?></div>
+                <div class="cell-mini-label"><?php _e('Development Code', 'eweb-content-functionalities');?></div>
                 <div class="cell-code-flex">
                     <?php echo $icon_html; ?>
                     <span class="cell-code-value">
@@ -80,21 +80,21 @@ add_shortcode('pipeline_bio_pipeline', function () {
             </div>
             <!-- Target -->
             <div class="cell cell-target">
-                <div class="cell-mini-label"><?php _e('Target', 'info-acf-plugin');?></div>
+                <div class="cell-mini-label"><?php _e('Target', 'eweb-content-functionalities');?></div>
                 <div class="cell-value-scroll"><?php echo esc_html($bio['target'] ?? ''); ?></div>
             </div>
             <!-- Market -->
             <div class="cell cell-market">
-                <div class="cell-mini-label"><?php _e('Market', 'info-acf-plugin');?></div>
+                <div class="cell-mini-label"><?php _e('Market', 'eweb-content-functionalities');?></div>
                 <div class="cell-value-scroll"><?php echo esc_html($bio['market'] ?? ''); ?></div>
             </div>
             <!-- Development -->
             <div class="cell cell-development">
-                <div class="cell-mini-label"><?php _e('Development', 'info-acf-plugin');?></div>
+                <div class="cell-mini-label"><?php _e('Development', 'eweb-content-functionalities');?></div>
                 <div class="bar-labels">
-                    <span><?php _e('In-Vitro','info-acf-plugin');?></span>
-                    <span><?php _e('In-Planta','info-acf-plugin');?></span>
-                    <span><?php _e('Field','info-acf-plugin');?></span>
+                    <span><?php _e('In-Vitro','eweb-content-functionalities');?></span>
+                    <span><?php _e('In-Planta','eweb-content-functionalities');?></span>
+                    <span><?php _e('Field','eweb-content-functionalities');?></span>
                 </div>
                 <div class="pipeline-bar">
                     <div class="pipeline-bar-fill" data-width="<?php echo $dev_w; ?>"></div>
@@ -102,11 +102,11 @@ add_shortcode('pipeline_bio_pipeline', function () {
             </div>
             <!-- Patent filling -->
             <div class="cell cell-patent">
-                <div class="cell-mini-label"><?php _e('Patent filling', 'info-acf-plugin');?></div>
+                <div class="cell-mini-label"><?php _e('Patent filling', 'eweb-content-functionalities');?></div>
                 <div class="bar-labels">
-                    <span><?php _e('PPP','info-acf-plugin');?></span>
-                    <span><?php _e('PCT','info-acf-plugin');?></span>
-                    <span><?php _e('National phases','info-acf-plugin');?></span>
+                    <span><?php _e('PPP','eweb-content-functionalities');?></span>
+                    <span><?php _e('PCT','eweb-content-functionalities');?></span>
+                    <span><?php _e('National phases','eweb-content-functionalities');?></span>
                 </div>
                 <div class="pipeline-bar">
                     <div class="pipeline-bar-fill patent" data-width="<?php echo $pat_w; ?>"></div>
@@ -114,7 +114,7 @@ add_shortcode('pipeline_bio_pipeline', function () {
             </div>
             <!-- Comments -->
             <div class="cell cell-comments">
-                <div class="cell-mini-label"><?php _e('Comments', 'info-acf-plugin');?></div>
+                <div class="cell-mini-label"><?php _e('Comments', 'eweb-content-functionalities');?></div>
                 <div class="cell-comments-ellipsis"><?php echo esc_html($bio['comments'] ?? ''); ?></div>
             </div>
         </div>

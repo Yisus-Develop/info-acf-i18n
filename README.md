@@ -1,9 +1,9 @@
-# Info ACF Plugin
+# EWEB - Content Functionalities
 Custom shortcodes for ACF fields.
 
 **Versión:** 1.2.1  
-**Text Domain:** `info-acf-plugin`  
-**Archivo principal:** `info-acf-plugin.php`
+**Text Domain:** `eweb-content-functionalities`  
+**Archivo principal:** `eweb-content-functionalities.php`
 
 ---
 
@@ -40,8 +40,8 @@ includes/
     tempo_leitura.php
   enqueue.php
 languages/
-  info-acf-plugin.pot
-info-acf-plugin.php
+  eweb-content-functionalities.pot
+eweb-content-functionalities.php
 readme.txt
 ```
 
@@ -64,7 +64,7 @@ Coloca estos shortcodes en entradas/páginas o widgets de Elementor. Entre paré
 Este shortcode renderiza el pipeline BIO y carga solo el CSS y JS necesarios. *(src: includes/shortcodes/pipeline-bio-shortcode.php)*
 - `[**pipeline_digital_pipeline**]` — Shortcode: [pipeline_digital_pipeline] *(src: includes/shortcodes/pipeline-digital-shortcode.php)*
 - `[**ipp_popup_espontaneo**]` — [ipp_popup_espontaneo form="6f7a3f8" btn_text="Candidatura Espontânea" title="Candidatura Espontânea"] *(src: includes/shortcodes/popup-espontaneo.php)*
-  - **Atributos:** 'form'     => '',         'btn_text' => __('Candidatura Espontânea', 'info-acf-plugin'),         'title'    => __('Candidatura Espontânea', 'info-acf-plugin'),
+  - **Atributos:** 'form'     => '',         'btn_text' => __('Candidatura Espontânea', 'eweb-content-functionalities'),         'title'    => __('Candidatura Espontânea', 'eweb-content-functionalities'),
 - `[**tempo_leitura**]` — Função para calcular tempo estimado de leitura *(src: includes/shortcodes/tempo_leitura.php)*
 
 
@@ -87,7 +87,7 @@ Este shortcode renderiza el pipeline BIO y carga solo el CSS y JS necesarios. *(
 
 ## 🌐 Internacionalización
 - Archivos de idioma en `languages/` (POT incluido).
-- Usa `__()`, `_e()`, `_x()` con el text domain `info-acf-plugin`.
+- Usa `__()`, `_e()`, `_x()` con el text domain `eweb-content-functionalities`.
 
 ## 🧰 Requisitos
 - WordPress 6.x recomendado

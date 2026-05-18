@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: info-acf-plugin 1.2.1\n"
+"Project-Id-Version: eweb-content-functionalities 1.2.1\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: custom-py\n"

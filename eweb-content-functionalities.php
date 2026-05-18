@@ -1,13 +1,13 @@
 <?php
 /**
- * Plugin Name: Info ACF Plugin
- * Description: Custom shortcodes for ACF fields.
+ * Plugin Name: EWEB - Content Functionalities
+ * Description: Content functionalities for WordPress projects: ACF-driven shortcodes, pipelines, vacancies, and popups.
  * Version: 1.2.1
- *Author: Yisus_Dev for dappin.pt
- * Author URI: https://enlaweb.co/
+ * Author: Yisus Develop
+ * Author URI: https://github.com/Yisus-Develop
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
- * Text Domain: info-acf-plugin
+ * Text Domain: eweb-content-functionalities
  */
 
 defined('ABSPATH') || exit;
@@ -19,7 +19,7 @@ if (!defined('IAP_PLUGIN_FILE')) {
 
 /** i18n */
 add_action('plugins_loaded', function () {
-    load_plugin_textdomain('info-acf-plugin', false, dirname(plugin_basename(__FILE__)) . '/languages/');
+    load_plugin_textdomain('eweb-content-functionalities', false, dirname(plugin_basename(__FILE__)) . '/languages/');
 });
 
 /** Enqueue centralizado (global + condicional popups) */

@@ -4,8 +4,8 @@
 function ipp_shortcode_popup_espontaneo($atts = []) {
     $atts = shortcode_atts([
         'form'     => '',
-        'btn_text' => __('Candidatura Espontânea', 'info-acf-plugin'),
-        'title'    => __('Candidatura Espontânea', 'info-acf-plugin'),
+        'btn_text' => __('Candidatura Espontânea', 'eweb-content-functionalities'),
+        'title'    => __('Candidatura Espontânea', 'eweb-content-functionalities'),
     ], $atts, 'ipp_popup_espontaneo');
 
     ob_start(); ?>
@@ -21,13 +21,13 @@ function ipp_shortcode_popup_espontaneo($atts = []) {
         $ipp_esp_popup_printed = true; ?>
         <div id="form-espontaneo" class="vac-popup" aria-hidden="true" role="dialog">
           <div class="vac-popup-content">
-            <button class="vac-close" aria-label="<?php echo esc_attr__('Fechar', 'info-acf-plugin'); ?>">&times;</button>
+            <button class="vac-close" aria-label="<?php echo esc_attr__('Fechar', 'eweb-content-functionalities'); ?>">&times;</button>
             <h2><?php echo esc_html($atts['title']); ?></h2>
             <?php
               if (!empty($atts['form'])) {
                 echo do_shortcode('[contact-form-7 id="'.esc_attr($atts['form']).'"]');
               } else {
-                echo '<p>'.esc_html__('Formulário não definido.', 'info-acf-plugin').'</p>';
+                echo '<p>'.esc_html__('Formulário não definido.', 'eweb-content-functionalities').'</p>';
               }
             ?>
           </div>

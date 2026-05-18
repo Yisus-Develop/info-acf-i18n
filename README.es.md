@@ -7,7 +7,7 @@ Plugin de WordPress con shortcodes personalizados para campos ACF, pipelines, va
 - Shortcodes para departamentos, proyectos, eventos y miembros.
 - Pipelines visuales (Bio y Digital).
 - Popups con integración de Contact Form 7.
-- Soporte de internacionalización (`info-acf-plugin`).
+- Soporte de internacionalización (`eweb-content-functionalities`).
 - Assets CSS/JS incluidos para frontend.
 
 ## Requisitos
@@ -18,7 +18,7 @@ Plugin de WordPress con shortcodes personalizados para campos ACF, pipelines, va
 
 ## Instalación
 
-1. Copia la carpeta del plugin en `/wp-content/plugins/info-acf-i18n/`.
+1. Copia la carpeta del plugin en `/wp-content/plugins/eweb-content-functionalities/`.
 2. Activa el plugin desde el panel de WordPress.
 3. Usa los shortcodes documentados en `readme.txt` o `README.md`.
 
@@ -39,7 +39,7 @@ Plugin de WordPress con shortcodes personalizados para campos ACF, pipelines, va
 
 La versión del plugin se define en:
 
-- Cabecera de `info-acf-plugin.php`
+- Cabecera de `eweb-content-functionalities.php`
 - `Stable tag` en `readme.txt`
 
 Ambos deben mantenerse sincronizados.

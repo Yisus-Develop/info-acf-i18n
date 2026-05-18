@@ -165,22 +165,22 @@ function iap_enqueue_member_card_assets_conditionally() {
  // 🗣️ Textos para JS (PT como base, traducibles)
 wp_localize_script('iap-member-card', 'MCARD_I18N', [
     // Botón móvil
-    'save_ios'     => __('Adicionar aos Contactos (iPhone)', 'info-acf-plugin'),
-    'save_android' => __('Guardar contacto (Android)', 'info-acf-plugin'),
-    'save_vcf'     => __('Guardar contacto (.vcf)', 'info-acf-plugin'),
+    'save_ios'     => __('Adicionar aos Contactos (iPhone)', 'eweb-content-functionalities'),
+    'save_android' => __('Guardar contacto (Android)', 'eweb-content-functionalities'),
+    'save_vcf'     => __('Guardar contacto (.vcf)', 'eweb-content-functionalities'),
 
     // Avisos móviles
-    'hint_ios'     => __('Ao tocar, abrirá nos Contactos.', 'info-acf-plugin'),
-    'hint_android' => __('Será descarregado o ficheiro .vcf; abra-o para adicionar aos seus contactos.', 'info-acf-plugin'),
+    'hint_ios'     => __('Ao tocar, abrirá nos Contactos.', 'eweb-content-functionalities'),
+    'hint_android' => __('Será descarregado o ficheiro .vcf; abra-o para adicionar aos seus contactos.', 'eweb-content-functionalities'),
 
     // Tabs / leyendas QR (desktop)
-    'tab_vcf'      => __('iPhone', 'info-acf-plugin'),
-    'tab_mecard'   => __('Android', 'info-acf-plugin'),
-    'cap_vcf'      => __('Escaneie com iPhone', 'info-acf-plugin'),
-    'cap_mecard'   => __('Escaneie com Android', 'info-acf-plugin'),
+    'tab_vcf'      => __('iPhone', 'eweb-content-functionalities'),
+    'tab_mecard'   => __('Android', 'eweb-content-functionalities'),
+    'cap_vcf'      => __('Escaneie com iPhone', 'eweb-content-functionalities'),
+    'cap_mecard'   => __('Escaneie com Android', 'eweb-content-functionalities'),
 
     // Tip en desktop (debajo del QR)
-    'tip_desktop'  => __('Escolha o seu dispositivo. Se o QR não abrir contactos, use o botão no telemóvel.', 'info-acf-plugin'),
+    'tip_desktop'  => __('Escolha o seu dispositivo. Se o QR não abrir contactos, use o botão no telemóvel.', 'eweb-content-functionalities'),
 ]);
 
 

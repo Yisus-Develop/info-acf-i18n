@@ -2,7 +2,7 @@
 /**
  * Router de shortcodes
  * Carga centralizada (y controlada) de todos los shortcodes del plugin.
- * Ubicación: info-acf-i18n/includes/shortcodes/router.php
+ * Ubicación: eweb-content-functionalities/includes/shortcodes/router.php
  */
 defined('ABSPATH') || exit;
 
@@ -17,7 +17,7 @@ function iap_require_shortcode($relative_file) {
         require_once $path;
     } elseif (defined('WP_DEBUG') && WP_DEBUG) {
         // Solo muestra el notice si WP_DEBUG está activado (modo desarrollo)
-        trigger_error(sprintf('[info-acf-plugin] Shortcode file not found: %s', $path), E_USER_NOTICE);
+        trigger_error(sprintf('[eweb-content-functionalities] Shortcode file not found: %s', $path), E_USER_NOTICE);
     }
 }
 

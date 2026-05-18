@@ -6,7 +6,7 @@ function shortcode_projetos_do_departamento() {
     if (!$post) return '';
 
     $output = '<div class="dept-section projet_dep">';
- //   $output .= '<h3>' . __('Projetos', 'info-acf-plugin') . '</h3>';
+ //   $output .= '<h3>' . __('Projetos', 'eweb-content-functionalities') . '</h3>';
     $output .= '<ul>';
 
     if (have_rows('projects', $post->ID)) {
@@ -18,7 +18,7 @@ function shortcode_projetos_do_departamento() {
             }
         }
     } else {
-        $output .= '<li>' . __('Nenhum projeto encontrado.', 'info-acf-plugin') . '</li>';
+        $output .= '<li>' . __('Nenhum projeto encontrado.', 'eweb-content-functionalities') . '</li>';
     }
 
     $output .= '</ul></div>';

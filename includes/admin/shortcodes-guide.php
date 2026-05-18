@@ -8,7 +8,7 @@ defined('ABSPATH') || exit;
 function iap_render_shortcodes_guide($highlight = false) {
     if ($highlight) {
         echo '<div style="border:2px solid #2271b1; padding:12px; margin-bottom:12px; background:#f0f6fc;">';
-        echo '<p style="margin:0 0 6px 0;"><strong>Obrigado por ativar o Info ACF Plugin!</strong></p>';
+        echo '<p style="margin:0 0 6px 0;"><strong>Obrigado por ativar o EWEB - Content Functionalities!</strong></p>';
         echo '<p style="margin:0;">Aqui tens uma guia rápida com todos os shortcodes disponíveis e respetivos atributos.</p>';
         echo '</div>';
     }
@@ -182,7 +182,7 @@ echo '</tr>';
 function iap_register_dashboard_widget() {
     wp_add_dashboard_widget(
         'iap_shortcodes_widget',
-        'Info ACF Plugin – Guia de Shortcodes',
+        'EWEB - Content Functionalities – Guia de Shortcodes',
         'iap_render_shortcodes_guide'
     );
 }

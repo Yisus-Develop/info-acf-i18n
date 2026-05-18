@@ -7,7 +7,7 @@ function ipp_shortcode_vacancies_grid($atts = []) {
     ], $atts, 'ipp_vacancies_grid');
 
     if (!class_exists('ACF')) {
-        return '<p>' . esc_html__('ACF plugin is required.', 'info-acf-plugin') . '</p>';
+        return '<p>' . esc_html__('ACF plugin is required.', 'eweb-content-functionalities') . '</p>';
     }
 
     $args = [
@@ -22,7 +22,7 @@ function ipp_shortcode_vacancies_grid($atts = []) {
     $query = new WP_Query($args);
 
     if (!$query->have_posts()) {
-        return '<p class="ipp-vacancies nãovagas">' . esc_html__('Não há vagas disponíveis no momento.', 'info-acf-plugin') . '</p>';
+        return '<p class="ipp-vacancies nãovagas">' . esc_html__('Não há vagas disponíveis no momento.', 'eweb-content-functionalities') . '</p>';
     }
 
     ob_start(); ?>
@@ -39,37 +39,37 @@ function ipp_shortcode_vacancies_grid($atts = []) {
         ?>
             <div class="ipp-vacancy-card">
                 <div class="vacancy-header">
-                    <h4 class="ipp-vacancy-heading"><?php echo esc_html__('Recrutamento', 'info-acf-plugin'); ?></h4>
+                    <h4 class="ipp-vacancy-heading"><?php echo esc_html__('Recrutamento', 'eweb-content-functionalities'); ?></h4>
                 </div>
 
                 <ul class="ipp-vacancy-info">
-                    <li><strong><?php echo esc_html__('Posição:', 'info-acf-plugin'); ?></strong>
+                    <li><strong><?php echo esc_html__('Posição:', 'eweb-content-functionalities'); ?></strong>
                         <span class="vacancy-position"><?php echo esc_html($position); ?></span></li>
                     <?php if ($department): ?>
-                        <li><strong><?php echo esc_html__('Departamento:', 'info-acf-plugin'); ?></strong>
+                        <li><strong><?php echo esc_html__('Departamento:', 'eweb-content-functionalities'); ?></strong>
                             <span class="ipp-department"><?php echo esc_html($department->post_title); ?></span></li>
                     <?php endif; ?>
                     <?php if ($date_limit): ?>
-                        <li><strong><?php echo esc_html__('Prazo:', 'info-acf-plugin'); ?></strong>
+                        <li><strong><?php echo esc_html__('Prazo:', 'eweb-content-functionalities'); ?></strong>
                             <span class="vacancy-chip"><?php echo esc_html($date_limit); ?></span></li>
                     <?php endif; ?>
                     <?php if ($reference): ?>
-                        <li><strong><?php echo esc_html__('Ref.:', 'info-acf-plugin'); ?></strong>
+                        <li><strong><?php echo esc_html__('Ref.:', 'eweb-content-functionalities'); ?></strong>
                             <span class="vacancy-chip"><?php echo esc_html($reference); ?></span></li>
                     <?php endif; ?>
                 </ul>
 
                 <div class="ipp-vacancy-buttons">
                     <?php if ($url): ?>
-                        <a href="<?php echo esc_url($url); ?>" target="_blank" class="btn-link green"><?php echo esc_html__('SABER MAIS', 'info-acf-plugin'); ?></a>
+                        <a href="<?php echo esc_url($url); ?>" target="_blank" class="btn-link green"><?php echo esc_html__('SABER MAIS', 'eweb-content-functionalities'); ?></a>
                     <?php endif; ?>
                     <?php if ($notice_url): ?>
-                        <a href="<?php echo $notice_url; ?>" target="_blank" class="btn-link"><?php echo esc_html__('EDITAL', 'info-acf-plugin'); ?></a>
+                        <a href="<?php echo $notice_url; ?>" target="_blank" class="btn-link"><?php echo esc_html__('EDITAL', 'eweb-content-functionalities'); ?></a>
                     <?php endif; ?>
                     <a href="#" class="btn-link green vac-btn"
                        data-target="form-vacante"
                        data-vacancy="<?php echo esc_attr(get_the_ID()); ?>">
-                       <?php echo esc_html__('APLICAR AGORA', 'info-acf-plugin'); ?>
+                       <?php echo esc_html__('APLICAR AGORA', 'eweb-content-functionalities'); ?>
                     </a>
                 </div>
             </div>
@@ -84,7 +84,7 @@ function ipp_shortcode_vacancies_grid($atts = []) {
         <!-- Popup de Candidatura a Vaga -->
         <div id="form-vacante" class="vac-popup" aria-hidden="true" role="dialog">
           <div class="vac-popup-content">
-            <button class="vac-close" aria-label="<?php echo esc_attr__('Fechar', 'info-acf-plugin'); ?>">&times;</button>
+            <button class="vac-close" aria-label="<?php echo esc_attr__('Fechar', 'eweb-content-functionalities'); ?>">&times;</button>
             <input type="hidden" id="selected-vacancy" name="vacancy_id" value="">
             <?php echo do_shortcode('[contact-form-7 id="'.esc_attr($atts['form']).'"]'); ?>
           </div>

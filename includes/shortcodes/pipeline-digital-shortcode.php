@@ -16,12 +16,12 @@ add_shortcode('pipeline_digital_pipeline', function () {
     ob_start(); ?>
     <div class="pipeline-digital-list">
         <div class="pipeline-digital-header">
-            <div><?php _e('Product', 'info-acf-plugin'); ?></div>
-            <div><?php _e('Target', 'info-acf-plugin'); ?></div>
-            <div><?php _e('Market', 'info-acf-plugin'); ?></div>
-            <div><?php _e('Development', 'info-acf-plugin'); ?></div>
-            <div><?php _e('Market Launch', 'info-acf-plugin'); ?></div>
-            <div><?php _e('Comments', 'info-acf-plugin'); ?></div>
+            <div><?php _e('Product', 'eweb-content-functionalities'); ?></div>
+            <div><?php _e('Target', 'eweb-content-functionalities'); ?></div>
+            <div><?php _e('Market', 'eweb-content-functionalities'); ?></div>
+            <div><?php _e('Development', 'eweb-content-functionalities'); ?></div>
+            <div><?php _e('Market Launch', 'eweb-content-functionalities'); ?></div>
+            <div><?php _e('Comments', 'eweb-content-functionalities'); ?></div>
         </div>
         <?php foreach ($pipelines as $post):
             $id  = $post->ID;
@@ -45,7 +45,7 @@ add_shortcode('pipeline_digital_pipeline', function () {
         <div class="pipeline-digital-row">
             <!-- Product -->
             <div class="cell cell-product">
-                <div class="cell-mini-label"><?php _e('Product', 'info-acf-plugin'); ?></div>
+                <div class="cell-mini-label"><?php _e('Product', 'eweb-content-functionalities'); ?></div>
                 <div class="cell-product-flex">
                     <?php echo $icon_html; ?>
                     <span class="cell-product-value">
@@ -55,31 +55,31 @@ add_shortcode('pipeline_digital_pipeline', function () {
             </div>
             <!-- Target -->
             <div class="cell cell-target">
-                <div class="cell-mini-label"><?php _e('Target', 'info-acf-plugin'); ?></div>
+                <div class="cell-mini-label"><?php _e('Target', 'eweb-content-functionalities'); ?></div>
                 <div class="cell-value-scroll"><?php echo esc_html($dg['target'] ?? ''); ?></div>
             </div>
             <!-- Market -->
             <div class="cell cell-market">
-                <div class="cell-mini-label"><?php _e('Market', 'info-acf-plugin'); ?></div>
+                <div class="cell-mini-label"><?php _e('Market', 'eweb-content-functionalities'); ?></div>
                 <div class="cell-value-scroll"><?php echo esc_html($dg['market'] ?? ''); ?></div>
             </div>
             <!-- Development (binary bar) -->
             <div class="cell cell-development">
-                <div class="cell-mini-label"><?php _e('Development', 'info-acf-plugin'); ?></div>
+                <div class="cell-mini-label"><?php _e('Development', 'eweb-content-functionalities'); ?></div>
                 <div class="pipeline-bar">
                     <div class="pipeline-bar-fill" data-width="<?php echo esc_attr($dev_width); ?>"></div>
                 </div>
             </div>
             <!-- Market Launch (binary bar) -->
             <div class="cell cell-launch">
-                <div class="cell-mini-label"><?php _e('Market Launch', 'info-acf-plugin'); ?></div>
+                <div class="cell-mini-label"><?php _e('Market Launch', 'eweb-content-functionalities'); ?></div>
                 <div class="pipeline-bar">
                     <div class="pipeline-bar-fill patent" data-width="<?php echo esc_attr($ml_width); ?>"></div>
                 </div>
             </div>
             <!-- Comments -->
             <div class="cell cell-comments">
-                <div class="cell-mini-label"><?php _e('Comments', 'info-acf-plugin'); ?></div>
+                <div class="cell-mini-label"><?php _e('Comments', 'eweb-content-functionalities'); ?></div>
                 <div class="cell-comments-ellipsis">
                     <?php echo esc_html($dg['comments'] ?? ''); ?>
                 </div>

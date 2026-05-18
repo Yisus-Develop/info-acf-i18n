@@ -5,7 +5,7 @@ defined('ABSPATH') || exit;
 add_shortcode('member_contact_popup', function($atts){
   global $post;
 
-  $default_btn = __('Cartão Digital', 'info-acf-plugin');
+  $default_btn = __('Cartão Digital', 'eweb-content-functionalities');
   $a = shortcode_atts(['id'=>'','btn'=>$default_btn], $atts, 'member_contact_popup');
 
   // Resolver ID
@@ -58,7 +58,7 @@ add_shortcode('member_contact_popup', function($atts){
     <div id="<?php echo esc_attr($uid); ?>" class="mc-popup" aria-hidden="true">
       <div class="mc-card" role="dialog" aria-modal="true" aria-labelledby="mc-title-<?php echo esc_attr($id); ?>">
 
-        <button class="mc-close" aria-label="<?php echo esc_attr__('Fechar', 'info-acf-plugin'); ?>">
+        <button class="mc-close" aria-label="<?php echo esc_attr__('Fechar', 'eweb-content-functionalities'); ?>">
           <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">
             <line x1="18" y1="6" x2="6" y2="18"/>
             <line x1="6" y1="6" x2="18" y2="18"/>
@@ -79,12 +79,12 @@ add_shortcode('member_contact_popup', function($atts){
         </div>
 
         <div class="mc-grid">
-          <?php if($phone):   ?><a class="mc-chip" href="tel:<?php echo esc_attr($phone); ?>"><span class="mc-ico"><?php echo mc_svg('phone'); ?></span> <?php echo esc_html__('Chamada', 'info-acf-plugin'); ?></a><?php endif; ?>
-          <?php if($wa):      ?><a class="mc-chip" target="_blank" rel="noopener" href="<?php echo esc_url( preg_match('~^https?://~',$wa)?$wa:'https://wa.me/'.preg_replace('/\D+/','',$wa) ); ?>"><span class="mc-ico"><?php echo mc_svg('whatsapp'); ?></span> <?php echo esc_html__('Mensagem', 'info-acf-plugin'); ?></a><?php endif; ?>
-          <?php if($email):   ?><a class="mc-chip" href="mailto:<?php echo esc_attr($email); ?>"><span class="mc-ico"><?php echo mc_svg('mail'); ?></span> <?php echo esc_html__('E-mail', 'info-acf-plugin'); ?></a><?php endif; ?>
-          <?php if($linkedin):?><a class="mc-chip" target="_blank" rel="noopener" href="<?php echo esc_url($linkedin); ?>"><span class="mc-ico"><?php echo mc_svg('linkedin'); ?></span> <?php echo esc_html__('LinkedIn', 'info-acf-plugin'); ?></a><?php endif; ?>
-          <?php if($site):    ?><a class="mc-chip" target="_blank" rel="noopener" href="<?php echo esc_url($site); ?>"><span class="mc-ico"><?php echo mc_svg('globe'); ?></span> <?php echo esc_html__('Website', 'info-acf-plugin'); ?></a><?php endif; ?>
-          <?php if($maps):    ?><a class="mc-chip" target="_blank" rel="noopener" href="<?php echo esc_url($maps); ?>"><span class="mc-ico"><?php echo mc_svg('map'); ?></span> <?php echo esc_html__('Localização', 'info-acf-plugin'); ?></a><?php endif; ?>
+          <?php if($phone):   ?><a class="mc-chip" href="tel:<?php echo esc_attr($phone); ?>"><span class="mc-ico"><?php echo mc_svg('phone'); ?></span> <?php echo esc_html__('Chamada', 'eweb-content-functionalities'); ?></a><?php endif; ?>
+          <?php if($wa):      ?><a class="mc-chip" target="_blank" rel="noopener" href="<?php echo esc_url( preg_match('~^https?://~',$wa)?$wa:'https://wa.me/'.preg_replace('/\D+/','',$wa) ); ?>"><span class="mc-ico"><?php echo mc_svg('whatsapp'); ?></span> <?php echo esc_html__('Mensagem', 'eweb-content-functionalities'); ?></a><?php endif; ?>
+          <?php if($email):   ?><a class="mc-chip" href="mailto:<?php echo esc_attr($email); ?>"><span class="mc-ico"><?php echo mc_svg('mail'); ?></span> <?php echo esc_html__('E-mail', 'eweb-content-functionalities'); ?></a><?php endif; ?>
+          <?php if($linkedin):?><a class="mc-chip" target="_blank" rel="noopener" href="<?php echo esc_url($linkedin); ?>"><span class="mc-ico"><?php echo mc_svg('linkedin'); ?></span> <?php echo esc_html__('LinkedIn', 'eweb-content-functionalities'); ?></a><?php endif; ?>
+          <?php if($site):    ?><a class="mc-chip" target="_blank" rel="noopener" href="<?php echo esc_url($site); ?>"><span class="mc-ico"><?php echo mc_svg('globe'); ?></span> <?php echo esc_html__('Website', 'eweb-content-functionalities'); ?></a><?php endif; ?>
+          <?php if($maps):    ?><a class="mc-chip" target="_blank" rel="noopener" href="<?php echo esc_url($maps); ?>"><span class="mc-ico"><?php echo mc_svg('map'); ?></span> <?php echo esc_html__('Localização', 'eweb-content-functionalities'); ?></a><?php endif; ?>
         </div>
 
         <?php
@@ -96,23 +96,23 @@ add_shortcode('member_contact_popup', function($atts){
           <div class="mc-mobile-actions">
             <a class="mc-download" href="<?php echo esc_url($vcf_url); ?>">
               <span class="mc-ico"><?php echo mc_svg('download'); ?></span>
-              <span class="mc-download-text"><?php echo esc_html__('Guardar contacto (.vcf)', 'info-acf-plugin'); ?></span>
+              <span class="mc-download-text"><?php echo esc_html__('Guardar contacto (.vcf)', 'eweb-content-functionalities'); ?></span>
             </a>
-            <small class="mc-android-hint" hidden><?php echo esc_html__('Será descarregado o ficheiro .vcf; abra-o para adicionar aos seus contactos.', 'info-acf-plugin'); ?></small>
+            <small class="mc-android-hint" hidden><?php echo esc_html__('Será descarregado o ficheiro .vcf; abra-o para adicionar aos seus contactos.', 'eweb-content-functionalities'); ?></small>
           </div>
  <small class="mc-qr-tip">Escolha o seu dispositivo.<br> Se o QR não abrir contactos, use o botão no telemóvel.</small>
           <!-- Desktop: QR con tabs -->
           <?php if ($has_vcf || $has_mec): ?>
           <div class="mc-qrcenter">
-            <div class="mc-qr-toggle" role="tablist" aria-label="<?php echo esc_attr__('Formato de QR', 'info-acf-plugin'); ?>">
+            <div class="mc-qr-toggle" role="tablist" aria-label="<?php echo esc_attr__('Formato de QR', 'eweb-content-functionalities'); ?>">
               <?php if ($has_vcf): ?>
                <button class="mc-qr-tab is-active" data-target="vcf" role="tab" aria-selected="true">
-  <?php echo esc_html__( 'iPhone', 'info-acf-plugin' ); ?>
+  <?php echo esc_html__( 'iPhone', 'eweb-content-functionalities' ); ?>
 </button>
               <?php endif; ?>
               <?php if ($has_mec): ?>
                 <button class="mc-qr-tab ..." data-target="mecard" ...>
-  <?php echo esc_html__( 'Android', 'info-acf-plugin' ); ?>
+  <?php echo esc_html__( 'Android', 'eweb-content-functionalities' ); ?>
 </button>
               <?php endif; ?>
             </div>
@@ -125,9 +125,9 @@ add_shortcode('member_contact_popup', function($atts){
                    src="<?php echo esc_url($has_vcf ? $qr_vcf : ($has_mec ? $qr_mec : '')); ?>"
                    data-src-vcf="<?php echo esc_attr($has_vcf ? $qr_vcf : ''); ?>"
                    data-src-mecard="<?php echo esc_attr($has_mec ? $qr_mec : ''); ?>"
-                   alt="<?php echo esc_attr__('QR contacto', 'info-acf-plugin'); ?>">
+                   alt="<?php echo esc_attr__('QR contacto', 'eweb-content-functionalities'); ?>">
               <figcaption class="mc-qr-caption">
-                <?php echo esc_html( $has_vcf ? __('QR (.vcf)', 'info-acf-plugin') : __('QR MECARD', 'info-acf-plugin') ); ?>
+                <?php echo esc_html( $has_vcf ? __('QR (.vcf)', 'eweb-content-functionalities') : __('QR MECARD', 'eweb-content-functionalities') ); ?>
               </figcaption>
             </figure>
           </div>

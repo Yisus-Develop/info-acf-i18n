@@ -12,7 +12,7 @@ function obter_tempo_leitura($post_id = null) {
 
     // Frase traduzível com gettext
     return sprintf(
-        esc_html__('%d min de leitura', 'info-acf-plugin'),
+        esc_html__('%d min de leitura', 'eweb-content-functionalities'),
         $tempo_leitura
     );
 }
